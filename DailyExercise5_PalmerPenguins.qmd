@@ -93,3 +93,12 @@ median(penguins_data$body_mass_g, na.rm = TRUE)
 ```{r}
 penguins_data[100,]$island
 ```
+
+#test
+```{r}
+data("airquality")
+
+
+library(visdat)
+vis_dat(airquality)
+```
