@@ -35,7 +35,7 @@ library(palmerpenguins)
 
 ```{r}
 penguins_data <- palmerpenguins::penguins
-class(penguins_data)
+class(penguins_data) 
 ```
 
 # 3. what is the structure of the penguins dataset?
