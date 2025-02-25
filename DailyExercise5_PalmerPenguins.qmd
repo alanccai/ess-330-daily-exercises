@@ -1,0 +1,95 @@
+---
+title: "DailyExercise5_PalmerPenguins"
+format: html
+editor: visual
+execute:
+  echo: true
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+library(palmerpenguins)
+```
+
+# 2. what is the class of the penguins dataset?
+
+```{r}
+penguins_data <- palmerpenguins::penguins
+class(penguins_data)
+```
+
+# 3. what is the structure of the penguins dataset?
+
+```{r}
+
+str(penguins_data)
+
+```
+
+344 observations (penguins) with 8 variables: "species" (Adelie, Chinstrap, or Gentoo), "island" (Biscoe, Dream, or Torgersen), "bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g", "sex" (male or female), and "year" (2007, 2008, or 2009).
+
+# 4. what are the dimensions of the penguins dataset?
+
+```{r}
+dim(penguins_data)
+
+```
+
+# 5. what are the column names of the penguins dataset?
+
+```{r}
+colnames(penguins_data)
+```
+
+# 6. what type of data is `flipper_length_mm` and `Island`?
+
+```{r}
+class(penguins_data$flipper_length_mm)
+
+class(penguins_data$island)
+```
+
+# 7. what is the mean flipper length of the penguins?
+
+```{r}
+mean(penguins_data$flipper_length_mm, na.rm = TRUE)
+
+```
+
+# 8. what is the standard deviation of flipper length in the penguins?
+
+```{r}
+sd(penguins_data$flipper_length_mm, na.rm = TRUE)
+```
+
+# 9. what is the median body mass of the penguins?
+
+```{r}
+median(penguins_data$body_mass_g, na.rm = TRUE)
+```
+
+# 10. what is the Island of the 100th penguin?
+
+```{r}
+penguins_data[100,]$island
+```
